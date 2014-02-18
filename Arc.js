@@ -10,15 +10,6 @@ function Arc( canvas, value ) {
   this.draw();
 }
 
-Arc.prototype.tween = function( value, time, delay ) {
-  TweenLite.to( this, time, { 
-    value: value, 
-    delay: delay,
-    onUpdate:this.draw, 
-    onUpdateScope: this
-  } );
-}
-
 Arc.prototype.setValue = function(value){
   this.value = value;
   this.draw();

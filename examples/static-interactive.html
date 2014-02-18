@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    
+    <title>Arc.js example</title>
+
+    <style type="text/css">
+
+    html, body {
+      height: 100%;
+
+    }
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+    body {
+      background: white;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+    <canvas class="arc1" width="120" height="120"></canvas>
+    <canvas class="arc2" width="180" height="180"></canvas>
+    <canvas class="arc3" width="240" height="240"></canvas>
+    <canvas class="arc4" width="60" height="60"></canvas>
+
+    <script type="text/javascript" src="../Arc.js"></script>
+    <script type="text/javascript">
+
+      var 
+        arc1 = new Arc( document.querySelector(".arc1"), 0 ),
+        arc2 = new Arc( document.querySelector(".arc2"), 0 ),
+        arc3 = new Arc( document.querySelector(".arc3"), 0 ),
+        arc4 = new Arc( document.querySelector(".arc4"), 0 ),
+        updateArcs = function(px,py){
+          px /= window.innerWidth;
+          py /= window.innerHeight;
+
+          arc1.setValue(px);
+          arc2.setValue(1-px);
+          arc3.setValue(py);
+          arc4.setValue(1-py);
+        };
+
+      arc1.strokeColor = 'red';
+      arc2.strokeColor = 'green';
+      arc3.strokeColor = 'blue';
+
+      document.addEventListener("mousemove",function(event){
+        updateArcs(event.pageX,event.pageY);
+      });
+
+      document.addEventListener("touchmove",function(event){
+        var touch = event.changedTouches[0];
+        updateArcs( touch.pageX, touch.pageY );
+        event.preventDefault();
+      });
+
+    </script>
+
+  </body>
+</html>
+
+

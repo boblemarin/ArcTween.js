@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    
+    <title>Arc.js example</title>
+
+    <style type="text/css">
+
+    html, body {
+      height: 100%;
+
+    }
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+    body {
+      background: white;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+    <canvas class="arc1" width="120" height="120"></canvas>
+    <canvas class="arc2" width="180" height="180"></canvas>
+    <canvas class="arc3" width="240" height="240"></canvas>
+    <canvas class="arc4" width="60" height="60"></canvas>
+
+    <script type="text/javascript" src="js/TweenLite.min.js"></script>
+    <script type="text/javascript" src="../Arc.js"></script>
+    <script type="text/javascript">
+
+// it's ok to use the static version and animate it with your animation system of choice.
+// (the key is to use the draw() function of the arc to update its appearance)
+
+var arc1 = new Arc( document.querySelector(".arc1"), 0 );
+var arc2 = new Arc( document.querySelector(".arc2"), 0 );
+var arc3 = new Arc( document.querySelector(".arc3"), 0 );
+var arc4 = new Arc( document.querySelector(".arc4"), 0 );
+
+TweenLite.to( arc1, 2, { 
+  value:.7, 
+  delay: 1,
+  onUpdate:arc1.draw, 
+  onUpdateScope: arc1 
+} );
+
+TweenLite.to( arc2, 2, { 
+  value:.9, 
+  delay: 3,
+  onUpdate:arc2.draw, 
+  onUpdateScope: arc2 
+} );
+
+TweenLite.to( arc3, 2, { 
+  value:.2, 
+  delay: 5,
+  onUpdate:arc3.draw, 
+  onUpdateScope: arc3 
+} );
+
+TweenLite.to( arc4, 2, { 
+  value:.45, 
+  delay: 7,
+  onUpdate:arc4.draw, 
+  onUpdateScope: arc4 
+} );
+
+    </script>
+
+  </body>
+</html>
+
+
