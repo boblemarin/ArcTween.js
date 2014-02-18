@@ -1,4 +1,4 @@
-Arc[Tween].js
+ArcTween.js
 ===========
 
 A simple widget that turns a canvas into a Arc vizualizer.
@@ -7,6 +7,8 @@ A simple widget that turns a canvas into a Arc vizualizer.
 
 - ArcTween.js is the animated version, using [TweenLite](http://www.greensock.com/gsap-js/) to handle animation stuff.
 
+
+See the examples [on this page](http://boblemarin.github.io/ArcTween.js/)
 
 Usage - Static version
 ----------------------
