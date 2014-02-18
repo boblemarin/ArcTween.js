@@ -1,4 +1,4 @@
-ArcTween.js
+Arc[Tween].js
 ===========
 
 A simple widget that turns a canvas into a Arc vizualizer.
@@ -68,7 +68,7 @@ Reference
 
 - `setValue( value )` : stores the value, and calls draw()
 - `draw()` : redraws the arc
-- `tween( value, animationTime, animationDelay )` : animate the arc to a given value *Tween version only*
+- `tween( value, animationTime, animationDelay )` : animate the arc to a given value *(Tween version only)*
 
 ### Properties
 

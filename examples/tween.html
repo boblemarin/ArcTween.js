@@ -39,8 +39,8 @@
 		<canvas class="arc3" width="240" height="240"></canvas>
 		<canvas class="arc4" width="60" height="60"></canvas>
 
-		<script type="text/javascript" src="TweenLite.min.js"></script>
-		<script type="text/javascript" src="ArcTween.js"></script>
+		<script type="text/javascript" src="js/TweenLite.min.js"></script>
+		<script type="text/javascript" src="../ArcTween.js"></script>
 		<script type="text/javascript">
 
 
@@ -53,11 +53,11 @@ var arc4 = new Arc( document.querySelector(".arc4"), 0 );
 setInterval( function() {
 
 	arc1.tween( Math.random(), .3+ Math.random()*.4, 0 );
-	arc2.tween( Math.random(), .3+ Math.random()*.4, 0.8 );
-	arc3.tween( Math.random(), .3+ Math.random()*.4, 1.2 );
-	arc4.tween( Math.random(), .3+ Math.random()*.4, 1.6 );
+	arc2.tween( Math.random(), .3+ Math.random()*.4, .3 );
+	arc3.tween( Math.random(), .3+ Math.random()*.4, .6 );
+	arc4.tween( Math.random(), .3+ Math.random()*.4, .9 );
 
-}, 3000 );
+}, 2000 );
 
 
 
